@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{ec504904-6d9a-4e9b-8926-2b453c6c69b4}</ProjectGuid>
+    <RootNamespace>Sablon</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)/include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;$(CoreLibraryDependencies);%(AdditionalDependencies);</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib/Winx64-visualStudio</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CursorPositions.cpp" />
+    <ClCompile Include="DrawingTool.cpp" />
+    <ClCompile Include="GlfwFunctions.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="PianoElements.cpp" />
+    <ClCompile Include="plugins\ikpMP3\CIrrKlangAudioStreamLoaderMP3.cpp" />
+    <ClCompile Include="plugins\ikpMP3\CIrrKlangAudioStreamMP3.cpp" />
+    <ClCompile Include="plugins\ikpMP3\decoder\bits.c" />
+    <ClCompile Include="plugins\ikpMP3\decoder\mpaudec.c" />
+    <ClCompile Include="plugins\ikpMP3\ikpMP3.cpp" />
+    <ClCompile Include="ShaderFunctions.cpp" />
+    <ClCompile Include="SoundMaker.cpp" />
+    <ClCompile Include="TextureFunctions.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="basic.frag" />
+    <None Include="basic.vert" />
+    <None Include="bin\winx64-visualStudio\01.HelloWorld.exe" />
+    <None Include="bin\winx64-visualStudio\02.3DSound.exe" />
+    <None Include="bin\winx64-visualStudio\03.MemoryPlayback.exe" />
+    <None Include="bin\winx64-visualStudio\04.OverrideFileAccess.exe" />
+    <None Include="bin\winx64-visualStudio\05.Effects.exe" />
+    <None Include="bin\winx64-visualStudio\06.Recording.exe" />
+    <None Include="bin\winx64-visualStudio\ikpFlac.dll" />
+    <None Include="bin\winx64-visualStudio\ikpMP3.dll" />
+    <None Include="bin\winx64-visualStudio\irrKlang.dll" />
+    <None Include="ikpMP3.dll" />
+    <None Include="irrKlang.dll" />
+    <None Include="lib\Winx64-visualStudio\irrKlang.exp" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CursorPositions.h" />
+    <ClInclude Include="DrawingTool.h" />
+    <ClInclude Include="GlfwFunctions.h" />
+    <ClInclude Include="include\ik_ESoundEngineOptions.h" />
+    <ClInclude Include="include\ik_ESoundOutputDrivers.h" />
+    <ClInclude Include="include\ik_EStreamModes.h" />
+    <ClInclude Include="include\ik_IAudioRecorder.h" />
+    <ClInclude Include="include\ik_IAudioStream.h" />
+    <ClInclude Include="include\ik_IAudioStreamLoader.h" />
+    <ClInclude Include="include\ik_IFileFactory.h" />
+    <ClInclude Include="include\ik_IFileReader.h" />
+    <ClInclude Include="include\ik_IRefCounted.h" />
+    <ClInclude Include="include\ik_irrKlangTypes.h" />
+    <ClInclude Include="include\ik_ISound.h" />
+    <ClInclude Include="include\ik_ISoundDeviceList.h" />
+    <ClInclude Include="include\ik_ISoundEffectControl.h" />
+    <ClInclude Include="include\ik_ISoundEngine.h" />
+    <ClInclude Include="include\ik_ISoundMixedOutputReceiver.h" />
+    <ClInclude Include="include\ik_ISoundSource.h" />
+    <ClInclude Include="include\ik_ISoundStopEventReceiver.h" />
+    <ClInclude Include="include\ik_IVirtualRefCounted.h" />
+    <ClInclude Include="include\ik_SAudioStreamFormat.h" />
+    <ClInclude Include="include\ik_vec3d.h" />
+    <ClInclude Include="include\irrKlang.h" />
+    <ClInclude Include="PianoElements.h" />
+    <ClInclude Include="plugins\ikpMP3\CIrrKlangAudioStreamLoaderMP3.h" />
+    <ClInclude Include="plugins\ikpMP3\CIrrKlangAudioStreamMP3.h" />
+    <ClInclude Include="plugins\ikpMP3\decoder\internal.h" />
+    <ClInclude Include="plugins\ikpMP3\decoder\mpaudec.h" />
+    <ClInclude Include="plugins\ikpMP3\decoder\mpaudectab.h" />
+    <ClInclude Include="plugins\ikpMP3\decoder\mpegaudio.h" />
+    <ClInclude Include="ShaderFunctions.h" />
+    <ClInclude Include="SoundMaker.h" />
+    <ClInclude Include="TextureFunctions.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\0.png" />
+    <Image Include="res\10.png" />
+    <Image Include="res\100.png" />
+    <Image Include="res\20.png" />
+    <Image Include="res\30.png" />
+    <Image Include="res\40.png" />
+    <Image Include="res\50.png" />
+    <Image Include="res\60.png" />
+    <Image Include="res\70.png" />
+    <Image Include="res\80.png" />
+    <Image Include="res\90.png" />
+    <Image Include="res\a#.png" />
+    <Image Include="res\a.png" />
+    <Image Include="res\balrog.png" />
+    <Image Include="res\blackKey.png" />
+    <Image Include="res\c#.png" />
+    <Image Include="res\c.png" />
+    <Image Include="res\cursorNote.png" />
+    <Image Include="res\cursorNoteResized.png" />
+    <Image Include="res\d#.png" />
+    <Image Include="res\d.png" />
+    <Image Include="res\e.png" />
+    <Image Include="res\emptySheet.png" />
+    <Image Include="res\f#.png" />
+    <Image Include="res\f.png" />
+    <Image Include="res\flames.png" />
+    <Image Include="res\g#.png" />
+    <Image Include="res\g.png" />
+    <Image Include="res\h.png" />
+    <Image Include="res\orchestraBackground.png" />
+    <Image Include="res\piano1.png" />
+    <Image Include="res\piano1Pressed.png" />
+    <Image Include="res\piano2.png" />
+    <Image Include="res\piano2Pressed.png" />
+    <Image Include="res\pianoBackground.png" />
+    <Image Include="res\pianoFrame.png" />
+    <Image Include="res\play.png" />
+    <Image Include="res\playPressed.png" />
+    <Image Include="res\pressedBlackKey.png" />
+    <Image Include="res\pressedWhiteKey.png" />
+    <Image Include="res\record.png" />
+    <Image Include="res\recordPressed.png" />
+    <Image Include="res\smallNote.png" />
+    <Image Include="res\stop.png" />
+    <Image Include="res\stopPressed.png" />
+    <Image Include="res\texel_checker.png" />
+    <Image Include="res\violin.png" />
+    <Image Include="res\violinPressed.png" />
+    <Image Include="res\whiteKey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="res\A3.mp3" />
+    <Media Include="res\A4.mp3" />
+    <Media Include="res\A5.mp3" />
+    <Media Include="res\A6.mp3" />
+    <Media Include="res\Ab3.mp3" />
+    <Media Include="res\Ab4.mp3" />
+    <Media Include="res\Ab5.mp3" />
+    <Media Include="res\Ab6.mp3" />
+    <Media Include="res\B3.mp3" />
+    <Media Include="res\B4.mp3" />
+    <Media Include="res\B5.mp3" />
+    <Media Include="res\B6.mp3" />
+    <Media Include="res\Bb3.mp3" />
+    <Media Include="res\Bb4.mp3" />
+    <Media Include="res\Bb5.mp3" />
+    <Media Include="res\Bb6.mp3" />
+    <Media Include="res\C3.mp3" />
+    <Media Include="res\C4.mp3" />
+    <Media Include="res\C5.mp3" />
+    <Media Include="res\C6.mp3" />
+    <Media Include="res\C7.mp3" />
+    <Media Include="res\D3.mp3" />
+    <Media Include="res\D4.mp3" />
+    <Media Include="res\D5.mp3" />
+    <Media Include="res\D6.mp3" />
+    <Media Include="res\Db3.mp3" />
+    <Media Include="res\Db4.mp3" />
+    <Media Include="res\Db5.mp3" />
+    <Media Include="res\Db6.mp3" />
+    <Media Include="res\E3.mp3" />
+    <Media Include="res\E4.mp3" />
+    <Media Include="res\E5.mp3" />
+    <Media Include="res\E6.mp3" />
+    <Media Include="res\Eb3.mp3" />
+    <Media Include="res\Eb4.mp3" />
+    <Media Include="res\Eb5.mp3" />
+    <Media Include="res\Eb6.mp3" />
+    <Media Include="res\F3.mp3" />
+    <Media Include="res\F4.mp3" />
+    <Media Include="res\F5.mp3" />
+    <Media Include="res\F6.mp3" />
+    <Media Include="res\G3.mp3" />
+    <Media Include="res\G4.mp3" />
+    <Media Include="res\G5.mp3" />
+    <Media Include="res\G6.mp3" />
+    <Media Include="res\Gb3.mp3" />
+    <Media Include="res\Gb4.mp3" />
+    <Media Include="res\Gb5.mp3" />
+    <Media Include="res\Gb6.mp3" />
+    <Media Include="res\VA4.mp3" />
+    <Media Include="res\VA5.mp3" />
+    <Media Include="res\VAb4.mp3" />
+    <Media Include="res\VAb5.mp3" />
+    <Media Include="res\VB4.mp3" />
+    <Media Include="res\VB5.mp3" />
+    <Media Include="res\VBb4.mp3" />
+    <Media Include="res\VBb5.mp3" />
+    <Media Include="res\VC4.mp3" />
+    <Media Include="res\VC5.mp3" />
+    <Media Include="res\VC6.mp3" />
+    <Media Include="res\VD4.mp3" />
+    <Media Include="res\VD5.mp3" />
+    <Media Include="res\VDb4.mp3" />
+    <Media Include="res\VDb5.mp3" />
+    <Media Include="res\VE4.mp3" />
+    <Media Include="res\VE5.mp3" />
+    <Media Include="res\VEb4.mp3" />
+    <Media Include="res\VEb5.mp3" />
+    <Media Include="res\VF4.mp3" />
+    <Media Include="res\VF5.mp3" />
+    <Media Include="res\VG4.mp3" />
+    <Media Include="res\VG5.mp3" />
+    <Media Include="res\VGb4.mp3" />
+    <Media Include="res\VGb5.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="irrKlang.lib" />
+    <Library Include="lib\Winx64-visualStudio\irrKlang.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="plugins\ikpMP3\license.txt" />
+    <Text Include="plugins\ikpMP3\readme.txt" />
+    <Text Include="results\file_durations.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\glfw.3.3.8\build\native\glfw.targets" Condition="Exists('packages\glfw.3.3.8\build\native\glfw.targets')" />
+    <Import Project="packages\glew-2.2.0.2.2.0.1\build\native\glew-2.2.0.targets" Condition="Exists('packages\glew-2.2.0.2.2.0.1\build\native\glew-2.2.0.targets')" />
+    <Import Project="packages\glm.0.9.9.800\build\native\glm.targets" Condition="Exists('packages\glm.0.9.9.800\build\native\glm.targets')" />
+    <Import Project="packages\Microsoft.CognitiveServices.Speech.1.41.1\build\native\Microsoft.CognitiveServices.Speech.targets" Condition="Exists('packages\Microsoft.CognitiveServices.Speech.1.41.1\build\native\Microsoft.CognitiveServices.Speech.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\glfw.3.3.8\build\native\glfw.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\glfw.3.3.8\build\native\glfw.targets'))" />
+    <Error Condition="!Exists('packages\glew-2.2.0.2.2.0.1\build\native\glew-2.2.0.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\glew-2.2.0.2.2.0.1\build\native\glew-2.2.0.targets'))" />
+    <Error Condition="!Exists('packages\glm.0.9.9.800\build\native\glm.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\glm.0.9.9.800\build\native\glm.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.CognitiveServices.Speech.1.41.1\build\native\Microsoft.CognitiveServices.Speech.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CognitiveServices.Speech.1.41.1\build\native\Microsoft.CognitiveServices.Speech.targets'))" />
+  </Target>
+</Project>

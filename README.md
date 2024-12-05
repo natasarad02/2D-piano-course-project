@@ -1,2 +1,2 @@
-# 2D-piano-course-project
+# 2D-piano-project
 Computational graphics course project
