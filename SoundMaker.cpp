@@ -238,7 +238,7 @@ namespace SoundMaker {
 			if (sound) {
 				
 				sound->setVolume(1.0f);
-				std::this_thread::sleep_for(std::chrono::milliseconds(2000));
+				std::this_thread::sleep_for(std::chrono::milliseconds(500));
 
 				// Stop the sound after the duration
 			    sound->stop();
