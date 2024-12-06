@@ -127,7 +127,7 @@ namespace SoundMaker {
 
 				if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_1) == GLFW_PRESS)
 				{
-					if (timeSinceLastSound.count() < 500 && isKeyPressedLongerThan(key, 10)) {
+					if (timeSinceLastSound.count() < 500) {
 						std::cout << "Same sound file '" << filePath << "' is already playing. Please wait 1 second." << std::endl;
 						//	currentKeyDuration = 2000;
 						return;

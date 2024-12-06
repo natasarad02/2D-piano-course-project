@@ -1,5 +1,3 @@
-res/C3.mp3, 61
-res/D3.mp3, 31
-res/E3.mp3, 31
-res/F3.mp3, 31
-res/F3.mp3, 0
+res/E3.mp3, 151
+res/F3.mp3, 721
+res/G3.mp3, 326
